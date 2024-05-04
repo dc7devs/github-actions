@@ -2,7 +2,7 @@ name: "CI (integração continua): main workflow"
 
 on:
     pull_request:
-        type: [opened, synchronize]
+        types: [opened, synchronize]
 
 jobs:
     linter:
