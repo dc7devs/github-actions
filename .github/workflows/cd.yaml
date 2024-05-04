@@ -7,7 +7,7 @@ env:
 
 on:
     push:
-        branches: ['main', 'feature/**']
+        branches: ['main', 'deploy/**']
 
 jobs:
     deploy:
@@ -19,4 +19,4 @@ jobs:
               run: npm install
               
             - name: Run deploy
-              run: npm int deploy:prod
+              run: npm deploy:prod
