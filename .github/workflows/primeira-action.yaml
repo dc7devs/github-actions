@@ -5,7 +5,7 @@ on:
   push:
     branches: ['main']
   pull_request:
-    branches: ['main']
+    type: [opened, synchronize]
 
 # Denição de fluxos de trabalhos que podem ser compostos por um ou mais fluxos que podem ser excutados em sequencia ou paralelamente
 jobs:
