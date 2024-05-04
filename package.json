@@ -8,7 +8,7 @@
     "build": "rm -rf build && next build && mv ./out ./build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint -- --fix"
+    "lint:fix": "next lint --fix"
   },
   "keywords": [],
   "author": "",
