@@ -19,7 +19,7 @@ jobs:
               run: npm install
 
             - name: Run login vercel
-              run: npx vercel login --github
+              run: npx vercel login
               
             - name: Run deploy
               run: npm run deploy:prod
