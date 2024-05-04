@@ -1,6 +1,7 @@
 name: "CD (Continuous Delivery): main workflow"
 
 env:
+    VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
@@ -17,5 +18,5 @@ jobs:
             - name: Run deploy
               run: |
                 npm install
-                npx vercel login
+                npm install --global vercel@latest
                 npm run deploy:prod
