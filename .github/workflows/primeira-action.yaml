@@ -5,7 +5,7 @@ on:
   push:
     branches: ['main']
   pull_request:
-    branches: ['main']
+    types: [opened, synchronize]
 
 # Denição de fluxos de trabalhos que podem ser compostos por um ou mais fluxos que podem ser excutados em sequencia ou paralelamente
 jobs:
@@ -18,8 +18,5 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Run a list file
+        run: ls -la

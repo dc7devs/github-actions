@@ -1,0 +1,25 @@
+name: "CD (Continuous Delivery): main workflow"
+
+env:
+    VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+    VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on:
+    push:
+        branches: ['main', 'deploy/**']
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Intall vercel CLI
+              run: |
+                npm install
+                npm install --global vercel@latest
+            - name: Deploy Project Artifacts to Vercel
+              run: |
+                npm run deploy:local
+                npm run deploy:prod
