@@ -9,8 +9,10 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "deploy:local": "npx vercel pull --yes --environment=production --token=$VERCEL_TOKEN && npx vercel build --prod --yes --token=$VERCEL_TOKEN",
-    "deploy:prod": "npx vercel deploy --prebuilt --prod --yes --token=$VERCEL_TOKEN"
+    "deploy:pull": "npx vercel pull --yes --environment=production --token=$VERCEL_TOKEN",
+    "deploy:local": "npm run deploy:pull && npx vercel build --prod --yes --token=$VERCEL_TOKEN",
+    "deploy:preview": "npm run deploy:pull && npx vercel deploy --prebuilt --token=$VERCEL_TOKEN",
+    "deploy:prod": "npx vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN"
   },
   "keywords": [],
   "author": "",
