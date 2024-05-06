@@ -5,7 +5,6 @@ export default function Page() {
     <>
       <h1>Hello, World!</h1>
       <Link href={"/sobre"}>Ir para a página sobre</Link>
-      
     </>
   );
 }
