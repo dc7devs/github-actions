@@ -6,6 +6,7 @@ on:
     branches: ['main']
   pull_request:
     types: [opened, synchronize]
+  workflow_dispatch:
 
 # Denição de fluxos de trabalhos que podem ser compostos por um ou mais fluxos que podem ser excutados em sequencia ou paralelamente
 jobs:
